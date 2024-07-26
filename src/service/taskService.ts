@@ -11,7 +11,7 @@ export const getAllTask = async () => {
             headers: { 'Content-Type': "application/json" },
         })
         if (!res.ok) throw new Error("Response not ok");
-        const parsed = await res.json();
+        const parsed = await res.json();        
         return parsed;
     } catch (err) {
         throw new Error(err);

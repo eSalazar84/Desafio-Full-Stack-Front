@@ -1,24 +1,19 @@
-import { React, useContext } from "react";
-import { TaskContext } from "../../context/taskContext";
+import { React } from 'react';
+import './Card.css'
 
-const Card = () => {
+function Card({ task }) {
+    const { id, title, description, status, createdAt } = task
 
-    const { task } = useContext(TaskContext)
     return (
-        <>
+        <article id={id} className='card' >
+            <h2>{title}</h2>
+            <h3>{description}</h3>
+            <h5>Cargado el: {new Date(createdAt).toLocaleDateString()}</h5>
+            <h4>Estado: {status}</h4>
             <div>
-                <ul>
-                    {task.map((item) => (
-                            <li key={item.id}>
-                                
-                            <div>Titulo: {item.title} </div>
-                            </li>
-                        ))
-                    }
-                </ul>
-
+                <button >Eliminar Tarea</button>
             </div>
-        </>
+        </article>
     )
 }
 
