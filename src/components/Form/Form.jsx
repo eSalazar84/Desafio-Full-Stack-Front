@@ -55,12 +55,11 @@ function Form() {
                         </select>
                     </label>
                     <div>
-
-                        <button type="submit">Agregar</button>
+                        <button type="submit" className="btn-agregar">Agregar</button>
                     </div>
                 </form>
                 <div>
-                    <button onClick={() => navigate('/')}>Volver</button>
+                    <button onClick={() => navigate('/')} className="btn-volver">Volver</button>
                 </div>
             </div>
         </>

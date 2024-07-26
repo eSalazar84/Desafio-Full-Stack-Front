@@ -3,3 +3,45 @@
 
   background-color: cadetblue;
 }
+
+/* Estilos comunes para todos los botones */
+button {
+  border: none;
+  color: black;
+  font-size: large;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Estilos específicos para el botón "Agregar" */
+.btn-agregar {
+  background-color: #4CAF50; /* Verde */
+}
+
+.btn-agregar:hover {
+  background-color: #45a049; /* Verde más oscuro */
+}
+
+/* Estilos específicos para el botón "Volver" */
+.btn-volver {
+  background-color: #008CBA; /* Azul */
+}
+
+.btn-volver:hover {
+  background-color: #007bb5; /* Azul más oscuro */
+}
+
+/* Estilos específicos para el botón "Eliminar Tarea" */
+.btn-eliminar {
+  background-color: #f44336; /* Rojo */
+}
+
+.btn-eliminar:hover {
+  background-color: #d32f2f; /* Rojo más oscuro */
+}

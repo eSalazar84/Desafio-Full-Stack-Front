@@ -21,7 +21,7 @@ function Home() {
                 <h1 className='title'>Lista de Tareas</h1>
             </header>
             <nav>
-                <button onClick={handleClick}>Agregar Tarea</button>
+                <button className='btn-agregar' onClick={handleClick}>Agregar Tarea</button>
             </nav>
             <section className='layout'>
                 {
