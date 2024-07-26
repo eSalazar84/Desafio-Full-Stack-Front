@@ -31,36 +31,38 @@ function Form() {
     return (
         <>
             <h1>Registra una nueva tarea!</h1>
-            <form className="form" onSubmit={handleSubmit}>
-                <label htmlFor="title">
-                    Título:
-                    <input type="text" name="title" id="title" onChange={handleChange} />
-                </label>
-                <label htmlFor="description">
-                    Descripción:
-                    <input type="text" name="description" id="description" onChange={handleChange} />
-                </label>
-                <label htmlFor="status">
-                    Estado:
-                    <select
-                        type="text"
-                        name="status"
-                        id="status"
-                        onChange={handleChange}
-                    >
-                        <option value="to_do">Para Hacer</option>
-                        <option value="in_progress">En Progreso</option>
-                        <option value="done">Listo!</option>
-                    </select>
-                </label>
-                <div>
+            <div className="form">
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="title">
+                        Título:
+                        <input type="text" name="title" id="title" required onChange={handleChange} />
+                    </label>
+                    <label htmlFor="description">
+                        Descripción:
+                        <input type="text" name="description" id="description" onChange={handleChange} />
+                    </label>
+                    <label htmlFor="status">
+                        Estado:
+                        <select
+                            type="text"
+                            name="status"
+                            id="status"
+                            onChange={handleChange}
+                        >
+                            <option value="Para_hacer">Para Hacer</option>
+                            <option value="En_progreso">En Progreso</option>
+                            <option value="Hecho">Listo!</option>
+                        </select>
+                    </label>
+                    <div>
 
-                    <button type="submit">Agregar</button>
+                        <button type="submit">Agregar</button>
+                    </div>
+                </form>
+                <div>
                     <button onClick={() => navigate('/')}>Volver</button>
                 </div>
-
-
-            </form>
+            </div>
         </>
     )
 }

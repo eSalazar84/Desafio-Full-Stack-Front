@@ -1,8 +1,20 @@
 import { React } from 'react';
 import './Card.css'
+import { removeTask } from '../../service/taskService';
 
-function Card({ task }) {
+function Card({ task, onTaskRemoved }) {
     const { id, title, description, status, createdAt } = task
+
+    const handleClick = async () => {
+        try {
+            await removeTask(id);
+            if (onTaskRemoved) {
+                onTaskRemoved(id);
+            }
+        } catch (error) {
+            console.error('Error eliminando la tarea:', error);
+        }
+    };
 
     return (
         <article id={id} className='card' >
@@ -11,7 +23,7 @@ function Card({ task }) {
             <h5>Cargado el: {new Date(createdAt).toLocaleDateString()}</h5>
             <h4>Estado: {status}</h4>
             <div>
-                <button >Eliminar Tarea</button>
+                <button onClick={() => handleClick()}>Eliminar Tarea</button>
             </div>
         </article>
     )

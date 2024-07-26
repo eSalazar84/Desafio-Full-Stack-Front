@@ -36,7 +36,7 @@ export const createTask = async (task: Itask) => {
 
 export const removeTask = async (id: number) => {
     try {
-        const res = await fetch(BASE_URL + id, {
+        const res = await fetch(`${BASE_URL}/${id}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         })
