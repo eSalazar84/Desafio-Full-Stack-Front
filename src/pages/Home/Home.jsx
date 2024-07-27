@@ -23,6 +23,7 @@ function Home() {
             <nav>
                 <button className='btn-agregar' onClick={handleClick}>Agregar Tarea</button>
             </nav>
+            
             <section className='layout'>
                 {
                     task.map(task => <Card task={task} key={task.id} />)

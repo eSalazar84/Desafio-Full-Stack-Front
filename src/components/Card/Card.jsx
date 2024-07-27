@@ -21,6 +21,11 @@ function Card({ task, onTaskRemoved }) {
             <h2>{title}</h2>
             <h3>{description}</h3>
             <h5>Cargado el: {new Date(createdAt).toLocaleDateString()}</h5>
+            <section>
+                <button>Para hacer</button>
+                <button>En progreso</button>
+                <button>Hecho!</button>
+            </section>
             <h4>Estado: {status}</h4>
             <div>
                 <button className="btn-eliminar" onClick={() => handleClick()}>Eliminar Tarea</button>
